@@ -13,6 +13,7 @@
 		145CA7E4206CD15D005CBB2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 145CA7E3206CD15D005CBB2A /* Assets.xcassets */; };
 		145CA7E7206CD15D005CBB2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 145CA7E5206CD15D005CBB2A /* LaunchScreen.storyboard */; };
 		145CA7EA206CD15D005CBB2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 145CA7E9206CD15D005CBB2A /* main.m */; };
+		145CA7F3206CD789005CBB2A /* UIView+Chinable.m in Sources */ = {isa = PBXBuildFile; fileRef = 145CA7F2206CD789005CBB2A /* UIView+Chinable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		145CA7E6206CD15D005CBB2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		145CA7E8206CD15D005CBB2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		145CA7E9206CD15D005CBB2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		145CA7F1206CD789005CBB2A /* UIView+Chinable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Chinable.h"; sourceTree = "<group>"; };
+		145CA7F2206CD789005CBB2A /* UIView+Chinable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Chinable.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		145CA7D9206CD15D005CBB2A /* XYChainableKit */ = {
 			isa = PBXGroup;
 			children = (
+				145CA7F0206CD773005CBB2A /* XYChainableView */,
 				145CA7DA206CD15D005CBB2A /* AppDelegate.h */,
 				145CA7DB206CD15D005CBB2A /* AppDelegate.m */,
 				145CA7DD206CD15D005CBB2A /* ViewController.h */,
@@ -69,6 +73,15 @@
 				145CA7E9206CD15D005CBB2A /* main.m */,
 			);
 			path = XYChainableKit;
+			sourceTree = "<group>";
+		};
+		145CA7F0206CD773005CBB2A /* XYChainableView */ = {
+			isa = PBXGroup;
+			children = (
+				145CA7F1206CD789005CBB2A /* UIView+Chinable.h */,
+				145CA7F2206CD789005CBB2A /* UIView+Chinable.m */,
+			);
+			path = XYChainableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +157,7 @@
 			files = (
 				145CA7DF206CD15D005CBB2A /* ViewController.m in Sources */,
 				145CA7EA206CD15D005CBB2A /* main.m in Sources */,
+				145CA7F3206CD789005CBB2A /* UIView+Chinable.m in Sources */,
 				145CA7DC206CD15D005CBB2A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

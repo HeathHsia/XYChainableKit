@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIView+Chinable.h"
 
 @interface ViewController ()
 
@@ -15,7 +16,12 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    UIView *view = [[UIView alloc] init];
+    view.XYbackgroundColor([UIColor redColor]).XYframe(CGRectMake(100, 100, 100, 100));
+    [self.view addSubview:view];
     // Do any additional setup after loading the view, typically from a nib.
 }
 

@@ -2,8 +2,8 @@
 
 The category of the UIKit attribute chain programming
 
-####For example
-UIView+Chinable
+#### For example<br>
+UIView+Chinable<br>
 ```
-	view.XYbackgroundColor([UIColor redColor]).XYframe(CGRectMake(100, 100, 100, 100));
+view.XYbackgroundColor([UIColor redColor]).XYframe(CGRectMake(100, 100, 100, 100));
 ```

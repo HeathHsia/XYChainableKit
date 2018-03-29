@@ -30,6 +30,16 @@
     };
 }
 
+- (XYViewPointChina)XYCenter
+{
+    return ^(CGPoint center){
+        if (!CGPointEqualToPoint(self.center, center)) {
+            self.center = center;
+        }
+        return self;
+    };
+}
+
 
 
 @end

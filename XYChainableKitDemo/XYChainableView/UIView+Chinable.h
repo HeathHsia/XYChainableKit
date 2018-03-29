@@ -10,10 +10,12 @@
 
 typedef UIView *(^XYViewIdChina)(id);
 typedef UIView *(^XYViewRectChina)(CGRect);
+typedef UIView *(^XYViewPointChina)(CGPoint);
 
 @interface UIView (Chinable)
 
 - (XYViewIdChina)XYbackgroundColor;
 - (XYViewRectChina)XYframe;
+- (XYViewPointChina)XYCenter;
 
 @end

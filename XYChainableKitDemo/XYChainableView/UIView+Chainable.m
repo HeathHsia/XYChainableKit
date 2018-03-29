@@ -6,11 +6,11 @@
 //  Copyright © 2018年 FireHsia. All rights reserved.
 //
 
-#import "UIView+Chinable.h"
+#import "UIView+Chainable.h"
 
-@implementation UIView (Chinable)
+@implementation UIView (Chainable)
 
-- (XYViewIdChina)XYbackgroundColor
+- (XYViewIdChain)XYBackgroundColor
 {
     return ^(id backgroundColor){
         if ([backgroundColor isKindOfClass:[UIColor class]]) {
@@ -20,7 +20,7 @@
     };
 }
 
-- (XYViewRectChina)XYframe
+- (XYViewRectChain)XYFrame
 {
     return ^(CGRect frame){
         if (!CGRectEqualToRect(self.frame, frame)) {
@@ -30,7 +30,7 @@
     };
 }
 
-- (XYViewPointChina)XYCenter
+- (XYViewPointChain)XYCenter
 {
     return ^(CGPoint center){
         if (!CGPointEqualToPoint(self.center, center)) {
@@ -39,6 +39,35 @@
         return self;
     };
 }
+
+- (XYViewRectChain)XYBounds
+{
+    return ^(CGRect bounds){
+        if (!CGRectEqualToRect(self.bounds, bounds)) {
+            self.bounds = bounds;
+        }
+        return self;
+    };
+}
+
+- (XYViewIntegerChain)XYTag
+{
+    return ^(NSInteger tag){
+        if (self.tag != tag) {
+            self.tag = tag;
+        }
+        return self;
+    };
+}
+
+- (XYViewTransformChain)XYTransform
+{
+    return ^(CGAffineTransform transform){
+        self.transform = transform;
+        return self;
+    };
+}
+
 
 
 

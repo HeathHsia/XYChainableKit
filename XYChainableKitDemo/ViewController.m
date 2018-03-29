@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UIView+Chinable.h"
+#import "UIView+Chainable.h"
 
 @interface ViewController ()
 
@@ -20,7 +20,7 @@
     [super viewDidLoad];
     
     UIView *view = [[UIView alloc] init];
-    view.XYbackgroundColor([UIColor redColor]).XYframe(CGRectMake(100, 100, 100, 100));
+    view.XYBackgroundColor([UIColor redColor]).XYFrame(CGRectMake(100, 100, 100, 100)).XYTag(1000);
     [self.view addSubview:view];
     // Do any additional setup after loading the view, typically from a nib.
 }

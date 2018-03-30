@@ -15,6 +15,8 @@
 		145CA808206CE791005CBB2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 145CA7FE206CE790005CBB2A /* AppDelegate.m */; };
 		145CA809206CE791005CBB2A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 145CA7FF206CE790005CBB2A /* ViewController.m */; };
 		145CA80A206CE791005CBB2A /* UIView+Chainable.m in Sources */ = {isa = PBXBuildFile; fileRef = 145CA802206CE790005CBB2A /* UIView+Chainable.m */; };
+		145CA80D206CF414005CBB2A /* UILabel+Chainable.m in Sources */ = {isa = PBXBuildFile; fileRef = 145CA80C206CF414005CBB2A /* UILabel+Chainable.m */; };
+		145CA810206DE757005CBB2A /* UIButton+Chainable.m in Sources */ = {isa = PBXBuildFile; fileRef = 145CA80F206DE757005CBB2A /* UIButton+Chainable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,10 @@
 		145CA7FF206CE790005CBB2A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = XYChainableKitDemo/ViewController.m; sourceTree = SOURCE_ROOT; };
 		145CA801206CE790005CBB2A /* UIView+Chainable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Chainable.h"; sourceTree = "<group>"; };
 		145CA802206CE790005CBB2A /* UIView+Chainable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Chainable.m"; sourceTree = "<group>"; };
+		145CA80B206CF414005CBB2A /* UILabel+Chainable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Chainable.h"; sourceTree = "<group>"; };
+		145CA80C206CF414005CBB2A /* UILabel+Chainable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Chainable.m"; sourceTree = "<group>"; };
+		145CA80E206DE757005CBB2A /* UIButton+Chainable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Chainable.h"; sourceTree = "<group>"; };
+		145CA80F206DE757005CBB2A /* UIButton+Chainable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Chainable.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +71,12 @@
 				145CA800206CE790005CBB2A /* XYChainableView */,
 				145CA7F4206CE790005CBB2A /* AppDelegate.h */,
 				145CA7FE206CE790005CBB2A /* AppDelegate.m */,
+				145CA7F8206CE790005CBB2A /* ViewController.h */,
+				145CA7FF206CE790005CBB2A /* ViewController.m */,
 				145CA7F6206CE790005CBB2A /* Assets.xcassets */,
 				145CA7F9206CE790005CBB2A /* Base.lproj */,
 				145CA7F5206CE790005CBB2A /* Info.plist */,
 				145CA7F7206CE790005CBB2A /* main.m */,
-				145CA7F8206CE790005CBB2A /* ViewController.h */,
-				145CA7FF206CE790005CBB2A /* ViewController.m */,
 			);
 			name = XYChainableKitDemo;
 			path = XYChainableKit;
@@ -91,6 +97,10 @@
 			children = (
 				145CA801206CE790005CBB2A /* UIView+Chainable.h */,
 				145CA802206CE790005CBB2A /* UIView+Chainable.m */,
+				145CA80B206CF414005CBB2A /* UILabel+Chainable.h */,
+				145CA80C206CF414005CBB2A /* UILabel+Chainable.m */,
+				145CA80E206DE757005CBB2A /* UIButton+Chainable.h */,
+				145CA80F206DE757005CBB2A /* UIButton+Chainable.m */,
 			);
 			name = XYChainableView;
 			path = XYChainableKitDemo/XYChainableView;
@@ -169,9 +179,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				145CA809206CE791005CBB2A /* ViewController.m in Sources */,
+				145CA80D206CF414005CBB2A /* UILabel+Chainable.m in Sources */,
 				145CA808206CE791005CBB2A /* AppDelegate.m in Sources */,
 				145CA80A206CE791005CBB2A /* UIView+Chainable.m in Sources */,
 				145CA805206CE791005CBB2A /* main.m in Sources */,
+				145CA810206DE757005CBB2A /* UIButton+Chainable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

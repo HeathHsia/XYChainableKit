@@ -1,16 +1,17 @@
 //
-//  UIView+Chinable.m
+//  UIButton+Chainable.m
 //  XYChainableKit
 //
-//  Created by FireHsia on 2018/3/29.
+//  Created by FireHsia on 2018/3/30.
 //  Copyright © 2018年 FireHsia. All rights reserved.
 //
 
-#import "UIView+Chainable.h"
+#import "UIButton+Chainable.h"
 
-@implementation UIView (Chainable)
+@implementation UIButton (Chainable)
 
-- (XYViewIdChain)XYBackgroundColor
+#pragma mark --- UIView
+- (XYButtonIdChain)XYBackgroundColor
 {
     return ^(id backgroundColor){
         if ([backgroundColor isKindOfClass:[UIColor class]]) {
@@ -20,7 +21,7 @@
     };
 }
 
-- (XYViewRectChain)XYFrame
+- (XYButtonRectChain)XYFrame
 {
     return ^(CGRect frame){
         if (!CGRectEqualToRect(self.frame, frame)) {
@@ -30,7 +31,7 @@
     };
 }
 
-- (XYViewPointChain)XYCenter
+- (XYButtonPointChain)XYCenter
 {
     return ^(CGPoint center){
         if (!CGPointEqualToPoint(self.center, center)) {
@@ -40,7 +41,7 @@
     };
 }
 
-- (XYViewRectChain)XYBounds
+- (XYButtonRectChain)XYBounds
 {
     return ^(CGRect bounds){
         if (!CGRectEqualToRect(self.bounds, bounds)) {
@@ -50,7 +51,7 @@
     };
 }
 
-- (XYViewIntegerChain)XYTag
+- (XYButtonIntegerChain)XYTag
 {
     return ^(NSInteger tag){
         if (self.tag != tag) {
@@ -60,17 +61,17 @@
     };
 }
 
-- (XYViewTransformChain)XYTransform
+- (XYButtonTransformChain)XYTransform
 {
     return ^(CGAffineTransform transform){
         if (!CGAffineTransformEqualToTransform(self.transform, transform)) {
-          self.transform = transform;
+            self.transform = transform;
         }
         return self;
     };
 }
 
-- (XYViewBoolChain)XYClipsToBounds
+- (XYButtonBoolChain)XYClipsToBounds
 {
     return ^(BOOL clipsToBounds){
         if (self.clipsToBounds != clipsToBounds) {
@@ -80,7 +81,7 @@
     };
 }
 
-- (XYViewFloatChain)XYAlpha
+- (XYButtonFloatChain)XYAlpha
 {
     return ^(CGFloat alpha){
         if (self.alpha != alpha) {
@@ -90,7 +91,7 @@
     };
 }
 
-- (XYViewBoolChain)XYHidden
+- (XYButtonBoolChain)XYHidden
 {
     return ^(BOOL hidden){
         if (self.hidden != hidden) {
@@ -100,8 +101,7 @@
     };
 }
 
-
-- (XYViewBoolChain)XYUserInteractionEnabled
+- (XYButtonBoolChain)XYUserInteractionEnabled
 {
     return ^(BOOL userInteractionEnabled){
         if (self.userInteractionEnabled != userInteractionEnabled) {
@@ -111,7 +111,45 @@
     };
 }
 
+#pragma mark UIButton
+- (XYButtonEdgeInsetsChain)titleEdgeInsets
+{
+    return ^(UIEdgeInsets edgeInsets){
+        if (!UIEdgeInsetsEqualToEdgeInsets(self.titleEdgeInsets, edgeInsets)) {
+            self.titleEdgeInsets = edgeInsets;
+        }
+        return self;
+    };
+}
 
+- (XYButtonEdgeInsetsChain)imageEdgeInsets
+{
+    return ^(UIEdgeInsets imageEdgeInsets){
+        if (!UIEdgeInsetsEqualToEdgeInsets(self.imageEdgeInsets, imageEdgeInsets)) {
+            self.imageEdgeInsets = imageEdgeInsets;
+        }
+        return self;
+    };
+}
 
+- (XYButtonIdChain)tintColor
+{
+    return ^(id tintColor){
+        if ([tintColor isKindOfClass:[UIColor class]]) {
+            self.tintColor = tintColor;
+        }
+        return self;
+    };
+}
+
+- (XYButtonIdIntegerChain)XYTitleForState
+{
+    return ^(id text, NSInteger controlState){
+        if ([text isKindOfClass:[NSString class]]) {
+            [self setTitle:text forState:controlState];
+        }
+        return self;
+    };
+}
 
 @end

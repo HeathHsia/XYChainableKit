@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "UIView+Chainable.h"
+#import "UILabel+Chainable.h"
+#import "UIButton+Chainable.h"
 
 @interface ViewController ()
 
@@ -18,10 +20,18 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
     UIView *view = [[UIView alloc] init];
     view.XYBackgroundColor([UIColor redColor]).XYFrame(CGRectMake(100, 100, 100, 100)).XYTag(1000);
     [self.view addSubview:view];
+    
+    UILabel *label = [[UILabel alloc] init];
+    label.XYFrame(CGRectMake(100, 250, 50, 40)).XYText(@"123").XYBackgroundColor([UIColor orangeColor]).XYAlpha(0.3);
+    [self.view addSubview:label];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.XYTitleForState(@"456", UIControlStateNormal).XYBackgroundColor([UIColor orangeColor]).XYFrame(CGRectMake(100, 450, 70, 70));
+    [self.view addSubview:button];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 

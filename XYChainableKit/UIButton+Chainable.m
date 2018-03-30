@@ -10,7 +10,7 @@
 
 @implementation UIButton (Chainable)
 
-#pragma mark --- UIView
+#pragma mark --- View
 - (XYButtonIdChain)XYBackgroundColor
 {
     return ^(id backgroundColor){
@@ -111,8 +111,8 @@
     };
 }
 
-#pragma mark UIButton
-- (XYButtonEdgeInsetsChain)titleEdgeInsets
+#pragma mark Button
+- (XYButtonEdgeInsetsChain)XYTitleEdgeInsets
 {
     return ^(UIEdgeInsets edgeInsets){
         if (!UIEdgeInsetsEqualToEdgeInsets(self.titleEdgeInsets, edgeInsets)) {
@@ -122,7 +122,7 @@
     };
 }
 
-- (XYButtonEdgeInsetsChain)imageEdgeInsets
+- (XYButtonEdgeInsetsChain)XYImageEdgeInsets
 {
     return ^(UIEdgeInsets imageEdgeInsets){
         if (!UIEdgeInsetsEqualToEdgeInsets(self.imageEdgeInsets, imageEdgeInsets)) {
@@ -132,7 +132,7 @@
     };
 }
 
-- (XYButtonIdChain)tintColor
+- (XYButtonIdChain)XYTintColor
 {
     return ^(id tintColor){
         if ([tintColor isKindOfClass:[UIColor class]]) {
@@ -144,12 +144,52 @@
 
 - (XYButtonIdIntegerChain)XYTitleForState
 {
-    return ^(id text, NSInteger controlState){
-        if ([text isKindOfClass:[NSString class]]) {
-            [self setTitle:text forState:controlState];
+    return ^(id title, NSInteger controlState){
+        if ([title isKindOfClass:[NSString class]]) {
+            [self setTitle:title forState:controlState];
         }
         return self;
     };
 }
+- (XYButtonIdIntegerChain)XYTitleColorForState
+{
+    return ^(id titleColor, NSInteger controlState){
+        if ([titleColor isKindOfClass:[UIColor class]]) {
+            [self setTitleColor:titleColor forState:controlState];
+        }
+        return self;
+    };
+}
+
+- (XYButtonIdIntegerChain)XYImageForState
+{
+    return ^(id image, NSInteger controlState){
+        if ([image isKindOfClass:[UIImage class]]) {
+            [self setImage:image forState:controlState];
+        }
+        return self;
+    };
+}
+
+- (XYButtonIdIntegerChain)XYBackgroundImageForState
+{
+    return ^(id backgroundImage, NSInteger controlState){
+        if ([backgroundImage isKindOfClass:[UIImage class]]) {
+            [self setBackgroundImage:backgroundImage forState:controlState];
+        }
+        return self;
+    };
+}
+
+- (XYButtonIdIntegerChain)XYAttributedTitleForState
+{
+    return ^(id attributedTitle, NSInteger controlState){
+        if ([attributedTitle isKindOfClass:[NSAttributedString class]]) {
+            [self setAttributedTitle:attributedTitle forState:controlState];
+        }
+        return self;
+    };
+}
+
 
 @end

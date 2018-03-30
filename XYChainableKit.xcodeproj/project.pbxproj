@@ -17,6 +17,8 @@
 		145CA80A206CE791005CBB2A /* UIView+Chainable.m in Sources */ = {isa = PBXBuildFile; fileRef = 145CA802206CE790005CBB2A /* UIView+Chainable.m */; };
 		145CA80D206CF414005CBB2A /* UILabel+Chainable.m in Sources */ = {isa = PBXBuildFile; fileRef = 145CA80C206CF414005CBB2A /* UILabel+Chainable.m */; };
 		145CA810206DE757005CBB2A /* UIButton+Chainable.m in Sources */ = {isa = PBXBuildFile; fileRef = 145CA80F206DE757005CBB2A /* UIButton+Chainable.m */; };
+		145CA813206E10D6005CBB2A /* UITextField+Chainable.m in Sources */ = {isa = PBXBuildFile; fileRef = 145CA812206E10D6005CBB2A /* UITextField+Chainable.m */; };
+		145CA816206E10E4005CBB2A /* UIImageView+Chainable.m in Sources */ = {isa = PBXBuildFile; fileRef = 145CA815206E10E4005CBB2A /* UIImageView+Chainable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,10 @@
 		145CA80C206CF414005CBB2A /* UILabel+Chainable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Chainable.m"; sourceTree = "<group>"; };
 		145CA80E206DE757005CBB2A /* UIButton+Chainable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+Chainable.h"; sourceTree = "<group>"; };
 		145CA80F206DE757005CBB2A /* UIButton+Chainable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Chainable.m"; sourceTree = "<group>"; };
+		145CA811206E10D6005CBB2A /* UITextField+Chainable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Chainable.h"; sourceTree = "<group>"; };
+		145CA812206E10D6005CBB2A /* UITextField+Chainable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Chainable.m"; sourceTree = "<group>"; };
+		145CA814206E10E4005CBB2A /* UIImageView+Chainable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Chainable.h"; sourceTree = "<group>"; };
+		145CA815206E10E4005CBB2A /* UIImageView+Chainable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Chainable.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +74,7 @@
 		145CA7D9206CD15D005CBB2A /* XYChainableKitDemo */ = {
 			isa = PBXGroup;
 			children = (
-				145CA800206CE790005CBB2A /* XYChainableView */,
+				145CA800206CE790005CBB2A /* XYChainableKitCategory */,
 				145CA7F4206CE790005CBB2A /* AppDelegate.h */,
 				145CA7FE206CE790005CBB2A /* AppDelegate.m */,
 				145CA7F8206CE790005CBB2A /* ViewController.h */,
@@ -92,7 +98,7 @@
 			path = XYChainableKitDemo/Base.lproj;
 			sourceTree = SOURCE_ROOT;
 		};
-		145CA800206CE790005CBB2A /* XYChainableView */ = {
+		145CA800206CE790005CBB2A /* XYChainableKitCategory */ = {
 			isa = PBXGroup;
 			children = (
 				145CA801206CE790005CBB2A /* UIView+Chainable.h */,
@@ -101,9 +107,13 @@
 				145CA80C206CF414005CBB2A /* UILabel+Chainable.m */,
 				145CA80E206DE757005CBB2A /* UIButton+Chainable.h */,
 				145CA80F206DE757005CBB2A /* UIButton+Chainable.m */,
+				145CA811206E10D6005CBB2A /* UITextField+Chainable.h */,
+				145CA812206E10D6005CBB2A /* UITextField+Chainable.m */,
+				145CA814206E10E4005CBB2A /* UIImageView+Chainable.h */,
+				145CA815206E10E4005CBB2A /* UIImageView+Chainable.m */,
 			);
-			name = XYChainableView;
-			path = XYChainableKitDemo/XYChainableView;
+			name = XYChainableKitCategory;
+			path = XYChainableKitDemo/XYChainableKitCategory;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -178,6 +188,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				145CA816206E10E4005CBB2A /* UIImageView+Chainable.m in Sources */,
+				145CA813206E10D6005CBB2A /* UITextField+Chainable.m in Sources */,
 				145CA809206CE791005CBB2A /* ViewController.m in Sources */,
 				145CA80D206CF414005CBB2A /* UILabel+Chainable.m in Sources */,
 				145CA808206CE791005CBB2A /* AppDelegate.m in Sources */,

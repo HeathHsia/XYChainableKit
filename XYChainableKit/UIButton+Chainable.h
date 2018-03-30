@@ -31,10 +31,14 @@ typedef UIButton *(^XYButtonEdgeInsetsChain)(UIEdgeInsets);
 - (XYButtonBoolChain)XYHidden;
 - (XYButtonBoolChain)XYUserInteractionEnabled;
 
+- (XYButtonIdChain)XYTintColor;
+- (XYButtonEdgeInsetsChain)XYTitleEdgeInsets;
+- (XYButtonEdgeInsetsChain)XYImageEdgeInsets;
 - (XYButtonIdIntegerChain)XYTitleForState;
-- (XYButtonEdgeInsetsChain)titleEdgeInsets;
-- (XYButtonEdgeInsetsChain)imageEdgeInsets;
-- (XYButtonIdChain)tintColor;
+- (XYButtonIdIntegerChain)XYTitleColorForState;
+- (XYButtonIdIntegerChain)XYImageForState;
+- (XYButtonIdIntegerChain)XYBackgroundImageForState;
+- (XYButtonIdIntegerChain)XYAttributedTitleForState;
 
 
 @end

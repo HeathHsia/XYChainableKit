@@ -1,17 +1,16 @@
 //
-//  UILabel+Chainable.m
+//  UIImageView+Chainable.m
 //  XYChainableKit
 //
-//  Created by FireHsia on 2018/3/29.
+//  Created by FireHsia on 2018/3/30.
 //  Copyright © 2018年 FireHsia. All rights reserved.
 //
 
-#import "UILabel+Chainable.h"
+#import "UIImageView+Chainable.h"
 
-@implementation UILabel (Chainable)
+@implementation UIImageView (Chainable)
 
-#pragma mark --- UIView
-- (XYLabelIdChain)XYBackgroundColor
+- (XYImageViewIdChain)XYBackgroundColor
 {
     return ^(id backgroundColor){
         if ([backgroundColor isKindOfClass:[UIColor class]]) {
@@ -21,7 +20,7 @@
     };
 }
 
-- (XYLabelRectChain)XYFrame
+- (XYImageViewRectChain)XYFrame
 {
     return ^(CGRect frame){
         if (!CGRectEqualToRect(self.frame, frame)) {
@@ -31,7 +30,7 @@
     };
 }
 
-- (XYLabelPointChain)XYCenter
+- (XYImageViewPointChain)XYCenter
 {
     return ^(CGPoint center){
         if (!CGPointEqualToPoint(self.center, center)) {
@@ -41,7 +40,7 @@
     };
 }
 
-- (XYLabelRectChain)XYBounds
+- (XYImageViewRectChain)XYBounds
 {
     return ^(CGRect bounds){
         if (!CGRectEqualToRect(self.bounds, bounds)) {
@@ -51,7 +50,7 @@
     };
 }
 
-- (XYLabelIntegerChain)XYTag
+- (XYImageViewIntegerChain)XYTag
 {
     return ^(NSInteger tag){
         if (self.tag != tag) {
@@ -61,7 +60,7 @@
     };
 }
 
-- (XYLabelTransformChain)XYTransform
+- (XYImageViewTransformChain)XYTransform
 {
     return ^(CGAffineTransform transform){
         if (!CGAffineTransformEqualToTransform(self.transform, transform)) {
@@ -71,7 +70,7 @@
     };
 }
 
-- (XYLabelBoolChain)XYClipsToBounds
+- (XYImageViewBoolChain)XYClipsToBounds
 {
     return ^(BOOL clipsToBounds){
         if (self.clipsToBounds != clipsToBounds) {
@@ -81,7 +80,7 @@
     };
 }
 
-- (XYLabelFloatChain)XYAlpha
+- (XYImageViewFloatChain)XYAlpha
 {
     return ^(CGFloat alpha){
         if (self.alpha != alpha) {
@@ -91,7 +90,7 @@
     };
 }
 
-- (XYLabelBoolChain)XYHidden
+- (XYImageViewBoolChain)XYHidden
 {
     return ^(BOOL hidden){
         if (self.hidden != hidden) {
@@ -101,7 +100,7 @@
     };
 }
 
-- (XYLabelBoolChain)XYUserInteractionEnabled
+- (XYImageViewBoolChain)XYUserInteractionEnabled
 {
     return ^(BOOL userInteractionEnabled){
         if (self.userInteractionEnabled != userInteractionEnabled) {
@@ -111,52 +110,75 @@
     };
 }
 
-#pragma mark --- UILabel
-- (XYLabelIdChain)XYText
+#pragma mark --- ImageView
+- (XYImageViewIdChain)XYImage
 {
-    return ^(id text){
-        if ([text isKindOfClass:[NSString class]] && ![self.text isEqualToString:text]) {
-            self.text = text;
+    return ^(id image){
+        if ([image isKindOfClass:[UIImage class]]) {
+            self.image = image;
         }
         return self;
     };
 }
 
-- (XYLabelIdChain)XYFont
+- (XYImageViewIdChain)XYHighlightedImage
 {
-    return ^(id font){
-        if ([font isKindOfClass:[UIFont class]] && ![self.font isEqual:font]) {
-            self.font = font;
+    return ^(id highlightedImage){
+        if ([highlightedImage isKindOfClass:[UIImage class]]) {
+            self.highlightedImage = highlightedImage;
         }
         return self;
     };
 }
 
-- (XYLabelIdChain)XYTextColor
+- (XYImageViewBoolChain)XYHighlighted
 {
-    return ^(id textColor){
-        if ([textColor isKindOfClass:[UIColor class]] && ![self.textColor isEqual:textColor]) {
-            self.textColor = textColor;
+    return ^(BOOL highlighted){
+        if (self.highlighted != highlighted) {
+            self.highlighted = highlighted;
         }
         return self;
     };
 }
 
-- (XYLabelIntegerChain)XYTextAlignment
+- (XYImageViewIdChain)XYAnimationImages
 {
-    return ^(NSInteger textAlignment){
-        if (self.textAlignment != textAlignment) {
-            self.textAlignment = textAlignment;
+    return ^(id animationImages){
+        if ([animationImages isKindOfClass:[NSArray class]]) {
+            self.animationImages = animationImages;
         }
         return self;
     };
 }
 
-- (XYLabelIntegerChain)XYNumberOfLines
+
+- (XYImageViewIdChain)XYHighlightedAnimationImages
 {
-    return ^(NSInteger numberOfLines){
-        if (self.numberOfLines != numberOfLines) {
-            self.numberOfLines = numberOfLines;
+    return ^(id highlightedAnimationImages){
+        if ([highlightedAnimationImages isKindOfClass:[NSArray class]]) {
+            self.highlightedAnimationImages = highlightedAnimationImages;
+        }
+        return self;
+    };
+}
+
+
+- (XYImageViewFloatChain)XYAnimationDuration
+{
+    return ^(CGFloat animationDuration){
+        if (self.animationDuration != animationDuration) {
+            self.animationDuration = animationDuration;
+        }
+        return self;
+    };
+}
+
+
+- (XYImageViewIntegerChain)XYAnimationRepeatCount
+{
+    return ^(NSInteger animationRepeatCount){
+        if (self.animationRepeatCount != animationRepeatCount) {
+            self.animationRepeatCount = animationRepeatCount;
         }
         return self;
     };

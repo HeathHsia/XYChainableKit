@@ -13,6 +13,8 @@ typedef UIView *(^XYViewRectChain)(CGRect);
 typedef UIView *(^XYViewPointChain)(CGPoint);
 typedef UIView *(^XYViewIntegerChain)(NSInteger);
 typedef UIView *(^XYViewTransformChain)(CGAffineTransform);
+typedef UIView *(^XYViewBoolChain)(BOOL);
+typedef UIView *(^XYViewFloatChain)(CGFloat);
 
 @interface UIView (Chainable)
 
@@ -22,5 +24,9 @@ typedef UIView *(^XYViewTransformChain)(CGAffineTransform);
 - (XYViewRectChain)XYBounds;
 - (XYViewIntegerChain)XYTag;
 - (XYViewTransformChain)XYTransform;
+- (XYViewBoolChain)XYClipsToBounds;
+- (XYViewFloatChain)XYAlpha;
+- (XYViewBoolChain)XYHidden;
+- (XYViewBoolChain)XYUserInteractionEnabled;
 
 @end

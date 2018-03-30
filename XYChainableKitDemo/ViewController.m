@@ -25,11 +25,11 @@
     [self.view addSubview:view];
     
     UILabel *label = [[UILabel alloc] init];
-    label.XYFrame(CGRectMake(100, 250, 50, 40)).XYText(@"123").XYBackgroundColor([UIColor orangeColor]).XYAlpha(0.3);
+    label.XYFrame(CGRectMake(100, 250, 50, 40)).XYText(@"Label Text").XYBackgroundColor([UIColor orangeColor]).XYAlpha(0.3).XYTextAlignment(NSTextAlignmentCenter);
     [self.view addSubview:label];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.XYTitleForState(@"456", UIControlStateNormal).XYBackgroundColor([UIColor orangeColor]).XYFrame(CGRectMake(100, 450, 70, 70));
+    button.XYTitleForState(@"按钮标题", UIControlStateNormal).XYBackgroundColor([UIColor orangeColor]).XYFrame(CGRectMake(100, 450, 70, 70)).XYTitleColorForState([UIColor redColor], UIControlStateNormal);
     [self.view addSubview:button];
     
     // Do any additional setup after loading the view, typically from a nib.

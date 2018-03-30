@@ -30,6 +30,7 @@ typedef UILabel *(^XYLabelRectChain)(CGRect);
 - (XYLabelBoolChain)XYUserInteractionEnabled;
 
 - (XYLabelIdChain)XYText;
+- (XYLabelIdChain)XYAttributedText;
 - (XYLabelIdChain)XYFont;
 - (XYLabelIdChain)XYTextColor;
 - (XYLabelIntegerChain)XYTextAlignment;

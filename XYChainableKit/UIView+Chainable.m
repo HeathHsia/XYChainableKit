@@ -63,7 +63,50 @@
 - (XYViewTransformChain)XYTransform
 {
     return ^(CGAffineTransform transform){
-        self.transform = transform;
+        if (!CGAffineTransformEqualToTransform(self.transform, transform)) {
+          self.transform = transform;
+        }
+        return self;
+    };
+}
+
+- (XYViewBoolChain)XYClipsToBounds
+{
+    return ^(BOOL clipsToBounds){
+        if (self.clipsToBounds != clipsToBounds) {
+            self.clipsToBounds = clipsToBounds;
+        }
+        return self;
+    };
+}
+
+- (XYViewFloatChain)XYAlpha
+{
+    return ^(CGFloat alpha){
+        if (self.alpha != alpha) {
+            self.alpha = alpha;
+        }
+        return self;
+    };
+}
+
+- (XYViewBoolChain)XYHidden
+{
+    return ^(BOOL hidden){
+        if (self.hidden != hidden) {
+            self.hidden = hidden;
+        }
+        return self;
+    };
+}
+
+
+- (XYViewBoolChain)XYUserInteractionEnabled
+{
+    return ^(BOOL userInteractionEnabled){
+        if (self.userInteractionEnabled != userInteractionEnabled) {
+            self.userInteractionEnabled = userInteractionEnabled;
+        }
         return self;
     };
 }

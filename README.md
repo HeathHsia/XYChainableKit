@@ -3,7 +3,7 @@
 The category of the UIKit attribute chain programming<br>
 
 
-#### For example:<br>
+### For example:<br>
 UIView+Chainable<br>
 ```
 view.XYBackgroundColor([UIColor redColor]).XYFrame(CGRectMake(100, 100, 100, 100));
@@ -18,4 +18,8 @@ UIButton+Chainable<br>
 ```
 button.XYTitleForState(@"456", UIControlStateNormal).XYBackgroundColor([UIColor orangeColor]).XYFrame(CGRectMake(100, 450, 70, 70)).XYTitleColorForState([UIColor redColor], UIControlStateNormal)
 ```
+### Installation
+Import the XYChainableKit folder. <br>
+than```#import "UIView+Chainable.h"```
+
 

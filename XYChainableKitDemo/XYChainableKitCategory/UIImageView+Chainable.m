@@ -7,108 +7,9 @@
 //
 
 #import "UIImageView+Chainable.h"
+#import "UIView+Chainable.h"
 
 @implementation UIImageView (Chainable)
-
-- (XYImageViewIdChain)XYBackgroundColor
-{
-    return ^(id backgroundColor){
-        if ([backgroundColor isKindOfClass:[UIColor class]]) {
-            self.backgroundColor = backgroundColor;
-        }
-        return self;
-    };
-}
-
-- (XYImageViewRectChain)XYFrame
-{
-    return ^(CGRect frame){
-        if (!CGRectEqualToRect(self.frame, frame)) {
-            self.frame = frame;
-        }
-        return self;
-    };
-}
-
-- (XYImageViewPointChain)XYCenter
-{
-    return ^(CGPoint center){
-        if (!CGPointEqualToPoint(self.center, center)) {
-            self.center = center;
-        }
-        return self;
-    };
-}
-
-- (XYImageViewRectChain)XYBounds
-{
-    return ^(CGRect bounds){
-        if (!CGRectEqualToRect(self.bounds, bounds)) {
-            self.bounds = bounds;
-        }
-        return self;
-    };
-}
-
-- (XYImageViewIntegerChain)XYTag
-{
-    return ^(NSInteger tag){
-        if (self.tag != tag) {
-            self.tag = tag;
-        }
-        return self;
-    };
-}
-
-- (XYImageViewTransformChain)XYTransform
-{
-    return ^(CGAffineTransform transform){
-        if (!CGAffineTransformEqualToTransform(self.transform, transform)) {
-            self.transform = transform;
-        }
-        return self;
-    };
-}
-
-- (XYImageViewBoolChain)XYClipsToBounds
-{
-    return ^(BOOL clipsToBounds){
-        if (self.clipsToBounds != clipsToBounds) {
-            self.clipsToBounds = clipsToBounds;
-        }
-        return self;
-    };
-}
-
-- (XYImageViewFloatChain)XYAlpha
-{
-    return ^(CGFloat alpha){
-        if (self.alpha != alpha) {
-            self.alpha = alpha;
-        }
-        return self;
-    };
-}
-
-- (XYImageViewBoolChain)XYHidden
-{
-    return ^(BOOL hidden){
-        if (self.hidden != hidden) {
-            self.hidden = hidden;
-        }
-        return self;
-    };
-}
-
-- (XYImageViewBoolChain)XYUserInteractionEnabled
-{
-    return ^(BOOL userInteractionEnabled){
-        if (self.userInteractionEnabled != userInteractionEnabled) {
-            self.userInteractionEnabled = userInteractionEnabled;
-        }
-        return self;
-    };
-}
 
 #pragma mark --- ImageView
 - (XYImageViewIdChain)XYImage
@@ -184,5 +85,56 @@
     };
 }
 
+
+#pragma mark --- View
+- (XYImageViewIdChain)XYBackgroundColor
+{
+    return (XYImageViewIdChain) [super XYBackgroundColor];
+}
+
+- (XYImageViewRectChain)XYFrame
+{
+    return (XYImageViewRectChain) [super XYFrame];
+}
+
+- (XYImageViewPointChain)XYCenter
+{
+    return (XYImageViewPointChain) [super XYCenter];
+}
+
+- (XYImageViewRectChain)XYBounds
+{
+    return (XYImageViewRectChain) [super XYBounds];
+}
+
+- (XYImageViewIntegerChain)XYTag
+{
+    return (XYImageViewIntegerChain) [super XYTag];
+}
+
+- (XYImageViewTransformChain)XYTransform
+{
+    return (XYImageViewTransformChain) [super XYTransform];
+}
+
+- (XYImageViewBoolChain)XYClipsToBounds
+{
+    return (XYImageViewBoolChain) [super XYClipsToBounds];
+}
+
+- (XYImageViewFloatChain)XYAlpha
+{
+    return (XYImageViewFloatChain) [super XYAlpha];
+}
+
+- (XYImageViewBoolChain)XYHidden
+{
+    return (XYImageViewBoolChain) [super XYHidden];
+}
+
+- (XYImageViewBoolChain)XYUserInteractionEnabled
+{
+    return (XYImageViewBoolChain) [super XYUserInteractionEnabled];
+}
 
 @end

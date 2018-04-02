@@ -18,6 +18,103 @@ typedef UITextField *(^XYTextFieldRectChain)(CGRect);
 
 @interface UITextField (Chainable)
 
+
+/**
+ Set text(NSString)
+ */
+- (XYTextFieldIdChain)XYText;
+
+/**
+ Set attributedText(NSAttributedString)
+ */
+- (XYTextFieldIdChain)XYAttributedText;
+
+/**
+ Set textColor(UIColor)
+ */
+- (XYTextFieldIdChain)XYTextColor;
+
+/**
+ Set font(UIFont)
+ */
+- (XYTextFieldIdChain)XYFont;
+
+/**
+ Set textAlignment(NSTextAlignment)
+ */
+- (XYTextFieldIntegerChain)XYTextAlignment;
+
+/**
+ Set borderStyle(UITextBorderStyle)
+ */
+- (XYTextFieldIntegerChain)XYBorderStyle;
+
+/**
+ Set placeholder(NSString)
+ */
+- (XYTextFieldIdChain)XYPlaceholder;
+
+/**
+ Set attributedPlaceholder(NSAttributedString)
+ */
+- (XYTextFieldIdChain)XYAttributedPlaceholder;
+
+/**
+ Set clearsOnBeginEditing(BOOL)
+ */
+- (XYTextFieldBoolChain)XYClearsOnBeginEditing;
+
+/**
+ Set background(UIImage)
+ */
+- (XYTextFieldIdChain)XYBackground;
+
+/**
+ Set disabledBackground(UIImage)
+ */
+- (XYTextFieldIdChain)XYDisabledBackground;
+
+/**
+ Set clearButtonMode(UITextFieldViewMode)
+ */
+- (XYTextFieldIntegerChain)XYClearButtonMode;
+
+/**
+ Set leftView(UIView)
+ */
+- (XYTextFieldIdChain)XYLeftView;
+
+/**
+ Set leftViewMode(UITextFieldViewMode)
+ */
+- (XYTextFieldIntegerChain)XYLeftViewMode;
+
+/**
+ Set rightView(UIView)
+ */
+- (XYTextFieldIdChain)XYRightView;
+
+/**
+ Set rightViewMode(UITextFieldViewMode)
+ */
+- (XYTextFieldIntegerChain)XYRightViewMode;
+
+/**
+ Set inputView(UIView)
+ */
+- (XYTextFieldIdChain)XYInputView;
+
+/**
+ Set inputAccessoryView(UIView)
+ */
+- (XYTextFieldIdChain)XYInputAccessoryView;
+
+/**
+ Set clearsOnInsertion(BOOL)
+ */
+- (XYTextFieldBoolChain)XYClearsOnInsertion;
+
+
 - (XYTextFieldIdChain)XYBackgroundColor;
 - (XYTextFieldRectChain)XYFrame;
 - (XYTextFieldPointChain)XYCenter;
@@ -29,24 +126,5 @@ typedef UITextField *(^XYTextFieldRectChain)(CGRect);
 - (XYTextFieldBoolChain)XYHidden;
 - (XYTextFieldBoolChain)XYUserInteractionEnabled;
 
-- (XYTextFieldIdChain)XYText;
-- (XYTextFieldIdChain)XYAttributedText;
-- (XYTextFieldIdChain)XYTextColor;
-- (XYTextFieldIdChain)XYFont;
-- (XYTextFieldIntegerChain)XYTextAlignment;
-- (XYTextFieldIntegerChain)XYBorderStyle;
-- (XYTextFieldIdChain)XYPlaceholder;
-- (XYTextFieldIdChain)XYAttributedPlaceholder;
-- (XYTextFieldBoolChain)XYClearsOnBeginEditing;
-- (XYTextFieldIdChain)XYBackground;
-- (XYTextFieldIdChain)XYDisabledBackground;
-- (XYTextFieldIntegerChain)XYClearButtonMode;
-- (XYTextFieldIdChain)XYLeftView;
-- (XYTextFieldIntegerChain)XYLeftViewMode;
-- (XYTextFieldIdChain)XYRightView;
-- (XYTextFieldIntegerChain)XYRightViewMode;
-- (XYTextFieldIdChain)XYInputView;
-- (XYTextFieldIdChain)XYInputAccessoryView;
-- (XYTextFieldBoolChain)XYClearsOnInsertion;
 
 @end

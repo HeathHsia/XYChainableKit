@@ -18,15 +18,54 @@ typedef UIView *(^XYViewFloatChain)(CGFloat);
 
 @interface UIView (Chainable)
 
+/**
+ Set backgroundColor(UIColor)
+ */
 - (XYViewIdChain)XYBackgroundColor;
+
+/**
+ Set frame(CGRect)
+ */
 - (XYViewRectChain)XYFrame;
+
+/**
+ Set center(CGPoint)
+ */
 - (XYViewPointChain)XYCenter;
+
+/**
+ Set bounds(CGRect)
+ */
 - (XYViewRectChain)XYBounds;
+
+/**
+ Set tag(NSInteger)
+ */
 - (XYViewIntegerChain)XYTag;
+
+/**
+ Set transform(CGAffineTransform)
+ */
 - (XYViewTransformChain)XYTransform;
+
+/**
+ Set clipsToBounds(Bool)
+ */
 - (XYViewBoolChain)XYClipsToBounds;
+
+/**
+ Set alpha(CGFloat)
+ */
 - (XYViewFloatChain)XYAlpha;
+
+/**
+ Set hidden(Bool)
+ */
 - (XYViewBoolChain)XYHidden;
+
+/**
+ Set userInteractionEnabled(Bool)
+ */
 - (XYViewBoolChain)XYUserInteractionEnabled;
 
 @end

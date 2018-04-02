@@ -7,109 +7,9 @@
 //
 
 #import "UILabel+Chainable.h"
+#import "UIView+Chainable.h"
 
 @implementation UILabel (Chainable)
-
-#pragma mark --- View
-- (XYLabelIdChain)XYBackgroundColor
-{
-    return ^(id backgroundColor){
-        if ([backgroundColor isKindOfClass:[UIColor class]]) {
-            self.backgroundColor = backgroundColor;
-        }
-        return self;
-    };
-}
-
-- (XYLabelRectChain)XYFrame
-{
-    return ^(CGRect frame){
-        if (!CGRectEqualToRect(self.frame, frame)) {
-            self.frame = frame;
-        }
-        return self;
-    };
-}
-
-- (XYLabelPointChain)XYCenter
-{
-    return ^(CGPoint center){
-        if (!CGPointEqualToPoint(self.center, center)) {
-            self.center = center;
-        }
-        return self;
-    };
-}
-
-- (XYLabelRectChain)XYBounds
-{
-    return ^(CGRect bounds){
-        if (!CGRectEqualToRect(self.bounds, bounds)) {
-            self.bounds = bounds;
-        }
-        return self;
-    };
-}
-
-- (XYLabelIntegerChain)XYTag
-{
-    return ^(NSInteger tag){
-        if (self.tag != tag) {
-            self.tag = tag;
-        }
-        return self;
-    };
-}
-
-- (XYLabelTransformChain)XYTransform
-{
-    return ^(CGAffineTransform transform){
-        if (!CGAffineTransformEqualToTransform(self.transform, transform)) {
-            self.transform = transform;
-        }
-        return self;
-    };
-}
-
-- (XYLabelBoolChain)XYClipsToBounds
-{
-    return ^(BOOL clipsToBounds){
-        if (self.clipsToBounds != clipsToBounds) {
-            self.clipsToBounds = clipsToBounds;
-        }
-        return self;
-    };
-}
-
-- (XYLabelFloatChain)XYAlpha
-{
-    return ^(CGFloat alpha){
-        if (self.alpha != alpha) {
-            self.alpha = alpha;
-        }
-        return self;
-    };
-}
-
-- (XYLabelBoolChain)XYHidden
-{
-    return ^(BOOL hidden){
-        if (self.hidden != hidden) {
-            self.hidden = hidden;
-        }
-        return self;
-    };
-}
-
-- (XYLabelBoolChain)XYUserInteractionEnabled
-{
-    return ^(BOOL userInteractionEnabled){
-        if (self.userInteractionEnabled != userInteractionEnabled) {
-            self.userInteractionEnabled = userInteractionEnabled;
-        }
-        return self;
-    };
-}
 
 #pragma mark --- Label
 - (XYLabelIdChain)XYText
@@ -171,6 +71,58 @@
         return self;
     };
 }
+
+#pragma mark --- View
+- (XYLabelIdChain)XYBackgroundColor
+{
+    return (XYLabelIdChain) [super XYBackgroundColor];
+}
+
+- (XYLabelRectChain)XYFrame
+{
+    return (XYLabelRectChain) [super XYFrame];
+}
+
+- (XYLabelPointChain)XYCenter
+{
+    return (XYLabelPointChain) [super XYCenter];
+}
+
+- (XYLabelRectChain)XYBounds
+{
+    return (XYLabelRectChain) [super XYBounds];
+}
+
+- (XYLabelIntegerChain)XYTag
+{
+    return (XYLabelIntegerChain) [super XYTag];
+}
+
+- (XYLabelTransformChain)XYTransform
+{
+    return (XYLabelTransformChain) [super XYTransform];
+}
+
+- (XYLabelBoolChain)XYClipsToBounds
+{
+    return (XYLabelBoolChain) [super XYClipsToBounds];
+}
+
+- (XYLabelFloatChain)XYAlpha
+{
+    return (XYLabelFloatChain) [super XYAlpha];
+}
+
+- (XYLabelBoolChain)XYHidden
+{
+    return (XYLabelBoolChain) [super XYHidden];
+}
+
+- (XYLabelBoolChain)XYUserInteractionEnabled
+{
+    return (XYLabelBoolChain) [super XYUserInteractionEnabled];
+}
+
 
 
 @end

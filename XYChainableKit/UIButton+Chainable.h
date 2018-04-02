@@ -20,6 +20,48 @@ typedef UIButton *(^XYButtonEdgeInsetsChain)(UIEdgeInsets);
 
 @interface UIButton (Chainable)
 
+
+/**
+ Set tintColor(UIColor)
+ */
+- (XYButtonIdChain)XYTintColor;
+
+/**
+ Set titleEdgeInsets(UIEdgeInsets)
+ */
+- (XYButtonEdgeInsetsChain)XYTitleEdgeInsets;
+
+/**
+ Set imageEdgeInsets(UIEdgeInsets)
+ */
+- (XYButtonEdgeInsetsChain)XYImageEdgeInsets;
+
+/**
+ Set titleForState(NSString, UIControlState)
+ */
+- (XYButtonIdIntegerChain)XYTitleForState;
+
+/**
+ Set titleColorForState(UIColor, UIControlState)
+ */
+- (XYButtonIdIntegerChain)XYTitleColorForState;
+
+/**
+ Set imageForState(UIImage, UIControlState)
+ */
+- (XYButtonIdIntegerChain)XYImageForState;
+
+/**
+ Set backgroundImageForState(UIImage, UIControlState)
+ */
+- (XYButtonIdIntegerChain)XYBackgroundImageForState;
+
+/**
+ Set attributedTitleForState(NSAttributedString, UIControlState)
+ */
+- (XYButtonIdIntegerChain)XYAttributedTitleForState;
+
+
 - (XYButtonIdChain)XYBackgroundColor;
 - (XYButtonRectChain)XYFrame;
 - (XYButtonPointChain)XYCenter;
@@ -30,15 +72,6 @@ typedef UIButton *(^XYButtonEdgeInsetsChain)(UIEdgeInsets);
 - (XYButtonFloatChain)XYAlpha;
 - (XYButtonBoolChain)XYHidden;
 - (XYButtonBoolChain)XYUserInteractionEnabled;
-
-- (XYButtonIdChain)XYTintColor;
-- (XYButtonEdgeInsetsChain)XYTitleEdgeInsets;
-- (XYButtonEdgeInsetsChain)XYImageEdgeInsets;
-- (XYButtonIdIntegerChain)XYTitleForState;
-- (XYButtonIdIntegerChain)XYTitleColorForState;
-- (XYButtonIdIntegerChain)XYImageForState;
-- (XYButtonIdIntegerChain)XYBackgroundImageForState;
-- (XYButtonIdIntegerChain)XYAttributedTitleForState;
 
 
 @end

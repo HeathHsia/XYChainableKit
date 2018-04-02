@@ -7,109 +7,9 @@
 //
 
 #import "UIButton+Chainable.h"
+#import "UIView+Chainable.h"
 
 @implementation UIButton (Chainable)
-
-#pragma mark --- View
-- (XYButtonIdChain)XYBackgroundColor
-{
-    return ^(id backgroundColor){
-        if ([backgroundColor isKindOfClass:[UIColor class]]) {
-            self.backgroundColor = backgroundColor;
-        }
-        return self;
-    };
-}
-
-- (XYButtonRectChain)XYFrame
-{
-    return ^(CGRect frame){
-        if (!CGRectEqualToRect(self.frame, frame)) {
-            self.frame = frame;
-        }
-        return self;
-    };
-}
-
-- (XYButtonPointChain)XYCenter
-{
-    return ^(CGPoint center){
-        if (!CGPointEqualToPoint(self.center, center)) {
-            self.center = center;
-        }
-        return self;
-    };
-}
-
-- (XYButtonRectChain)XYBounds
-{
-    return ^(CGRect bounds){
-        if (!CGRectEqualToRect(self.bounds, bounds)) {
-            self.bounds = bounds;
-        }
-        return self;
-    };
-}
-
-- (XYButtonIntegerChain)XYTag
-{
-    return ^(NSInteger tag){
-        if (self.tag != tag) {
-            self.tag = tag;
-        }
-        return self;
-    };
-}
-
-- (XYButtonTransformChain)XYTransform
-{
-    return ^(CGAffineTransform transform){
-        if (!CGAffineTransformEqualToTransform(self.transform, transform)) {
-            self.transform = transform;
-        }
-        return self;
-    };
-}
-
-- (XYButtonBoolChain)XYClipsToBounds
-{
-    return ^(BOOL clipsToBounds){
-        if (self.clipsToBounds != clipsToBounds) {
-            self.clipsToBounds = clipsToBounds;
-        }
-        return self;
-    };
-}
-
-- (XYButtonFloatChain)XYAlpha
-{
-    return ^(CGFloat alpha){
-        if (self.alpha != alpha) {
-            self.alpha = alpha;
-        }
-        return self;
-    };
-}
-
-- (XYButtonBoolChain)XYHidden
-{
-    return ^(BOOL hidden){
-        if (self.hidden != hidden) {
-            self.hidden = hidden;
-        }
-        return self;
-    };
-}
-
-- (XYButtonBoolChain)XYUserInteractionEnabled
-{
-    return ^(BOOL userInteractionEnabled){
-        if (self.userInteractionEnabled != userInteractionEnabled) {
-            self.userInteractionEnabled = userInteractionEnabled;
-        }
-        return self;
-    };
-}
 
 #pragma mark Button
 - (XYButtonEdgeInsetsChain)XYTitleEdgeInsets
@@ -189,6 +89,57 @@
         }
         return self;
     };
+}
+
+#pragma mark --- View
+- (XYButtonIdChain)XYBackgroundColor
+{
+    return (XYButtonIdChain) [super XYBackgroundColor];
+}
+
+- (XYButtonRectChain)XYFrame
+{
+    return (XYButtonRectChain) [super XYFrame];
+}
+
+- (XYButtonPointChain)XYCenter
+{
+    return (XYButtonPointChain) [super XYCenter];
+}
+
+- (XYButtonRectChain)XYBounds
+{
+    return (XYButtonRectChain) [super XYBounds];
+}
+
+- (XYButtonIntegerChain)XYTag
+{
+    return (XYButtonIntegerChain) [super XYTag];
+}
+
+- (XYButtonTransformChain)XYTransform
+{
+    return (XYButtonTransformChain) [super XYTransform];
+}
+
+- (XYButtonBoolChain)XYClipsToBounds
+{
+    return (XYButtonBoolChain) [super XYClipsToBounds];
+}
+
+- (XYButtonFloatChain)XYAlpha
+{
+    return (XYButtonFloatChain) [super XYAlpha];
+}
+
+- (XYButtonBoolChain)XYHidden
+{
+    return (XYButtonBoolChain) [super XYHidden];
+}
+
+- (XYButtonBoolChain)XYUserInteractionEnabled
+{
+    return (XYButtonBoolChain) [super XYUserInteractionEnabled];
 }
 
 

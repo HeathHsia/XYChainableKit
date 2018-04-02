@@ -18,6 +18,42 @@ typedef UIImageView *(^XYImageViewRectChain)(CGRect);
 
 @interface UIImageView (Chainable)
 
+/**
+ Set image(UIImage)
+ */
+- (XYImageViewIdChain)XYImage;
+
+/**
+ Set highlightedImage(UIImage)
+ */
+- (XYImageViewIdChain)XYHighlightedImage;
+
+/**
+ Set highlighted(BOOL)
+ */
+- (XYImageViewBoolChain)XYHighlighted;
+
+/**
+ Set animationImages(NSArray<UIImage>)
+ */
+- (XYImageViewIdChain)XYAnimationImages;
+
+/**
+ Set highlightedAnimationImages(NSArray<UIImage>)
+ */
+- (XYImageViewIdChain)XYHighlightedAnimationImages;
+
+/**
+ Set animationDuration(CGFloat)
+ */
+- (XYImageViewFloatChain)XYAnimationDuration;
+
+/**
+ Set animationRepeatCount(NSInteger)
+ */
+- (XYImageViewIntegerChain)XYAnimationRepeatCount;
+
+
 - (XYImageViewIdChain)XYBackgroundColor;
 - (XYImageViewRectChain)XYFrame;
 - (XYImageViewPointChain)XYCenter;
@@ -30,13 +66,7 @@ typedef UIImageView *(^XYImageViewRectChain)(CGRect);
 - (XYImageViewBoolChain)XYUserInteractionEnabled;
 
 
-- (XYImageViewIdChain)XYImage;
-- (XYImageViewIdChain)XYHighlightedImage;
-- (XYImageViewBoolChain)XYHighlighted;
-- (XYImageViewIdChain)XYAnimationImages;
-- (XYImageViewIdChain)XYHighlightedAnimationImages;
-- (XYImageViewFloatChain)XYAnimationDuration;
-- (XYImageViewIntegerChain)XYAnimationRepeatCount;
+
 
 
 @end

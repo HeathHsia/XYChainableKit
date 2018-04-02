@@ -30,6 +30,7 @@
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.XYTitleForState(@"按钮标题", UIControlStateNormal).XYBackgroundColor([UIColor orangeColor]).XYFrame(CGRectMake(100, 450, 70, 70)).XYTitleColorForState([UIColor redColor], UIControlStateNormal);
+    button.XYFrame(CGRectMake(100, 200, 300, 400)).XYTag(200);
     [self.view addSubview:button];
     
     // Do any additional setup after loading the view, typically from a nib.

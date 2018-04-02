@@ -7,108 +7,9 @@
 //
 
 #import "UITextField+Chainable.h"
+#import "UIView+Chainable.h"
 
 @implementation UITextField (Chainable)
-
-- (XYTextFieldIdChain)XYBackgroundColor
-{
-    return ^(id backgroundColor){
-        if ([backgroundColor isKindOfClass:[UIColor class]]) {
-            self.backgroundColor = backgroundColor;
-        }
-        return self;
-    };
-}
-
-- (XYTextFieldRectChain)XYFrame
-{
-    return ^(CGRect frame){
-        if (!CGRectEqualToRect(self.frame, frame)) {
-            self.frame = frame;
-        }
-        return self;
-    };
-}
-
-- (XYTextFieldPointChain)XYCenter
-{
-    return ^(CGPoint center){
-        if (!CGPointEqualToPoint(self.center, center)) {
-            self.center = center;
-        }
-        return self;
-    };
-}
-
-- (XYTextFieldRectChain)XYBounds
-{
-    return ^(CGRect bounds){
-        if (!CGRectEqualToRect(self.bounds, bounds)) {
-            self.bounds = bounds;
-        }
-        return self;
-    };
-}
-
-- (XYTextFieldIntegerChain)XYTag
-{
-    return ^(NSInteger tag){
-        if (self.tag != tag) {
-            self.tag = tag;
-        }
-        return self;
-    };
-}
-
-- (XYTextFieldTransformChain)XYTransform
-{
-    return ^(CGAffineTransform transform){
-        if (!CGAffineTransformEqualToTransform(self.transform, transform)) {
-            self.transform = transform;
-        }
-        return self;
-    };
-}
-
-- (XYTextFieldBoolChain)XYClipsToBounds
-{
-    return ^(BOOL clipsToBounds){
-        if (self.clipsToBounds != clipsToBounds) {
-            self.clipsToBounds = clipsToBounds;
-        }
-        return self;
-    };
-}
-
-- (XYTextFieldFloatChain)XYAlpha
-{
-    return ^(CGFloat alpha){
-        if (self.alpha != alpha) {
-            self.alpha = alpha;
-        }
-        return self;
-    };
-}
-
-- (XYTextFieldBoolChain)XYHidden
-{
-    return ^(BOOL hidden){
-        if (self.hidden != hidden) {
-            self.hidden = hidden;
-        }
-        return self;
-    };
-}
-
-- (XYTextFieldBoolChain)XYUserInteractionEnabled
-{
-    return ^(BOOL userInteractionEnabled){
-        if (self.userInteractionEnabled != userInteractionEnabled) {
-            self.userInteractionEnabled = userInteractionEnabled;
-        }
-        return self;
-    };
-}
 
 #pragma mark --- TextField
 - (XYTextFieldIdChain)XYText
@@ -300,6 +201,58 @@
         return self;
     };
 }
+
+#pragma mark --- View
+- (XYTextFieldIdChain)XYBackgroundColor
+{
+    return (XYTextFieldIdChain) [super XYBackgroundColor];
+}
+
+- (XYTextFieldRectChain)XYFrame
+{
+    return (XYTextFieldRectChain) [super XYFrame];
+}
+
+- (XYTextFieldPointChain)XYCenter
+{
+    return (XYTextFieldPointChain) [super XYCenter];
+}
+
+- (XYTextFieldRectChain)XYBounds
+{
+    return (XYTextFieldRectChain) [super XYBounds];
+}
+
+- (XYTextFieldIntegerChain)XYTag
+{
+    return (XYTextFieldIntegerChain) [super XYTag];
+}
+
+- (XYTextFieldTransformChain)XYTransform
+{
+    return (XYTextFieldTransformChain) [super XYTransform];
+}
+
+- (XYTextFieldBoolChain)XYClipsToBounds
+{
+    return (XYTextFieldBoolChain) [super XYClipsToBounds];
+}
+
+- (XYTextFieldFloatChain)XYAlpha
+{
+    return (XYTextFieldFloatChain) [super XYAlpha];
+}
+
+- (XYTextFieldBoolChain)XYHidden
+{
+    return (XYTextFieldBoolChain) [super XYHidden];
+}
+
+- (XYTextFieldBoolChain)XYUserInteractionEnabled
+{
+    return (XYTextFieldBoolChain) [super XYUserInteractionEnabled];
+}
+
 
 
 @end

@@ -18,6 +18,36 @@ typedef UILabel *(^XYLabelRectChain)(CGRect);
 
 @interface UILabel (Chainable)
 
+/**
+ Set text(NSString)
+ */
+- (XYLabelIdChain)XYText;
+
+/**
+ Set attributedText(NSAttributedString)
+ */
+- (XYLabelIdChain)XYAttributedText;
+
+/**
+ Set font(UIFont)
+ */
+- (XYLabelIdChain)XYFont;
+
+/**
+ Set textColor(UIColor)
+ */
+- (XYLabelIdChain)XYTextColor;
+
+/**
+ Set textAlignment(NSTextAlignment)
+ */
+- (XYLabelIntegerChain)XYTextAlignment;
+
+/**
+ Set numberOfLines(NSInteger)
+ */
+- (XYLabelIntegerChain)XYNumberOfLines;
+
 - (XYLabelIdChain)XYBackgroundColor;
 - (XYLabelRectChain)XYFrame;
 - (XYLabelPointChain)XYCenter;
@@ -28,12 +58,5 @@ typedef UILabel *(^XYLabelRectChain)(CGRect);
 - (XYLabelFloatChain)XYAlpha;
 - (XYLabelBoolChain)XYHidden;
 - (XYLabelBoolChain)XYUserInteractionEnabled;
-
-- (XYLabelIdChain)XYText;
-- (XYLabelIdChain)XYAttributedText;
-- (XYLabelIdChain)XYFont;
-- (XYLabelIdChain)XYTextColor;
-- (XYLabelIntegerChain)XYTextAlignment;
-- (XYLabelIntegerChain)XYNumberOfLines;
 
 @end

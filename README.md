@@ -19,7 +19,7 @@ UIButton+Chainable<br>
 button.XYTitleForState(@"456", UIControlStateNormal).XYBackgroundColor([UIColor orangeColor]).XYFrame(CGRectMake(100, 450, 70, 70)).XYTitleColorForState([UIColor redColor], UIControlStateNormal)
 ```
 ### Installation
-Import the XYChainableKit folder. <br>
-than```#import "UIView+Chainable.h"```
+
+```#import "UIView+Chainable.h"```
 
 
